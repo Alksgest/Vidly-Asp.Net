@@ -1,0 +1,28 @@
+﻿@model Vidly.ViewModels.MoviesViewModel
+
+
+
+<h1> Movies</h1>
+
+<table>
+    <caption>Movies</caption>
+    @if (Model.Movies.Count > 0)
+    {
+        int count = 0;
+        foreach (var movie in Model.Movies)
+        {
+            count++;
+            <tr>
+                <td>@Html.ActionLink($"{movie.Name}", count.ToString(), "Movies")</td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td>
+                <text>Threre are no movies</text>
+            </td>
+        </tr>
+    }
+</table>
