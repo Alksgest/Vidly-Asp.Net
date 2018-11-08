@@ -15,8 +15,10 @@ namespace VidlyApp.Models
  
         public int Price { get; set; }
 
-        [Required]
         public Genre Genre { get; set; }
+
+        [Display(Name = "Genre")][Required]
+        public int GenreId { get; set; }
 
         [Required]
         public DateTime ReleaseDate { get; set; }

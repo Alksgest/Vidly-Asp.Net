@@ -274,6 +274,14 @@
     <Compile Include="Migrations\201811080947202_AddedMoviesList.Designer.cs">
       <DependentUpon>201811080947202_AddedMoviesList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811081505477_RemoveRequriedPriceMovie.cs" />
+    <Compile Include="Migrations\201811081505477_RemoveRequriedPriceMovie.Designer.cs">
+      <DependentUpon>201811081505477_RemoveRequriedPriceMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811081511088_NewFieldInMovie.cs" />
+    <Compile Include="Migrations\201811081511088_NewFieldInMovie.Designer.cs">
+      <DependentUpon>201811081511088_NewFieldInMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -431,6 +439,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811080947202_AddedMoviesList.resx">
       <DependentUpon>201811080947202_AddedMoviesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811081505477_RemoveRequriedPriceMovie.resx">
+      <DependentUpon>201811081505477_RemoveRequriedPriceMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811081511088_NewFieldInMovie.resx">
+      <DependentUpon>201811081511088_NewFieldInMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -71,7 +71,7 @@ namespace VidlyApp.Controllers
 
                 movieInDb.Name = movie.Name;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
-                movieInDb.Genre = movie.Genre;
+                movieInDb.GenreId = movie.GenreId;
                 movieInDb.NumberInStock = movie.NumberInStock;
             }
             _context.SaveChanges();
@@ -91,7 +91,7 @@ namespace VidlyApp.Controllers
 
         public ActionResult Edit(int id)
         {
-            var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
+            var movie = _context.Movies.SingleOrDefault(c => c.Id == (id + 1));
             if (movie == null)
                 return HttpNotFound();
             var viewModel = new MovieFormViewModel
