@@ -1,12 +1,32 @@
-﻿@model VidlyApp.Models.Customer
+﻿@model VidlyApp.ViewModels.CustomersViewModel
 
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-<h1>@Model.Name</h1>
+<h1> Customers </h1>
 
-<ul>
-    <li>Membership Type: @Model.MembershipType.Name</li>
-    @if (Model.Birthdate != null)
+@if (!Model.Customers.Any())
+{
+    <p>Threre are no customers</p>
+}
+
+<table>
+    <thread>
+        <tr>
+            <th style="padding: 20px">Customer</th>
+            <th style="padding: 20px">Membership Type</th>
+            <th style="padding: 20px">Discount rate</th>
+
+        </tr>
+    </thread>
+    @foreach (var customer in Model.Customers)
     {
-        <li>Birthdate: @Model.Birthdate.Value.ToShortDateString()</li>
+        <tr>
+            <td style="padding: 20px">@Html.ActionLink($"{customer.Name}", "Edit", new { id = customer.Id })</td> @*Details*@
+            <td style="padding: 20px">@customer.MembershipType.Name</td>
+            <td style="padding: 20px">@customer.MembershipType.DiscountRate%</td>
+        </tr>
     }
-</ul>
+</table>

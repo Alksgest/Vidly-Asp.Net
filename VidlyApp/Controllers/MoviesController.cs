@@ -45,8 +45,7 @@ namespace VidlyApp.Controllers
             return View(viewModel);
         }
 
-        [Route("Movies")]
-        public ActionResult Movies()
+        public ActionResult Index()
         {
             var viewModel = new MoviesViewModel()
             {
@@ -55,8 +54,8 @@ namespace VidlyApp.Controllers
             return View(viewModel);
         }
 
-        [Route("Movies/{id:int}")]
-        public ActionResult Index(int? Id)
+      //  [Route("Movies/{id:int}")]
+        public ActionResult Details(int? Id)
         {
             if (!Id.HasValue)
                 Id = 1;

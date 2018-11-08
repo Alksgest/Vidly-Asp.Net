@@ -1,4 +1,4 @@
-﻿@model VidlyApp.ViewModels.CustomersViewModel
+﻿@*@model VidlyApp.ViewModels.CustomersViewModel
 
 
 <h1> Customers </h1>
@@ -20,9 +20,9 @@
        @foreach (var customer in Model.Customers)
         {
             <tr >
-                <td style="padding: 20px">@Html.ActionLink($"{customer.Name}", customer.Id.ToString(), "Customers")</td>
+                <td style="padding: 20px">@Html.ActionLink($"{customer.Name}", "Details", new { id = customer.Id})</td>
                 <td style="padding: 20px">@customer.MembershipType.Name</td>
                 <td style="padding: 20px">@customer.MembershipType.DiscountRate%</td>
             </tr>
         }
-   </table>
+   </table>*@

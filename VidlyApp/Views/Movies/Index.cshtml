@@ -1,13 +1,26 @@
-﻿@model VidlyApp.Models.Movie
+﻿@model VidlyApp.ViewModels.MoviesViewModel
 
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+<h1> Movies </h1>
+
+@if (!Model.Movies.Any())
+{
+    <p>Threre are no Movies</p>
 }
 
-<h2>@Model.Name</h2>
-<ul>
-    <li>Genre: @Model.Genre.Name</li>
-    <li>Release Date: @Model.ReleaseDate.ToLongDateString()</li>
-    <li>Date Added: @Model.DateAdded.ToLongDateString()</li>
-    <li>Number in Stock: @Model.NumberInStock</li>
-</ul>
+<table>
+    <thread>
+        <tr>
+            <th style="padding: 20px">Movie</th>
+            <th style="padding: 20px">Genre</th>
+        </tr>
+    </thread>
+    @foreach (var movie in Model.Movies)
+    {
+        <tr>
+            <td style="padding: 20px">@Html.ActionLink($"{movie.Name}", "Details", new { id = movie.Id - 1 })</td>
+            <td style="padding: 20px">@movie.Genre.Name</td>
+        </tr>
+    }
+</table>
