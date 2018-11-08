@@ -20,6 +20,11 @@ namespace Vidly.Controllers
                 new Movie{Name = "Disobedience", Id = 2 },
                 new Movie{Name = "Coco", Id = 3 }
             };
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         public MoviesController()
         {
             _context = new ApplicationDbContext();
@@ -56,10 +61,8 @@ namespace Vidly.Controllers
         {
             if (!Id.HasValue)
                 Id = 1;
-
             var viewModel = MoviesList[Id.Value - 1];
             return View(viewModel);
-
         }
 
         //[Route("movies/released/{year:regex(\\d{4})}/{month:regex(\\d{2}):range(1, 12)}")]

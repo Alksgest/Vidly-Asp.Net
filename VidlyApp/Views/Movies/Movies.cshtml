@@ -12,15 +12,15 @@
 <table>
     <thread>
         <tr>
-            <th>Movie</th>
-            <th>Genre</th>
+            <th style="padding: 20px">Movie</th>
+            <th style="padding: 20px">Genre</th>
         </tr>
     </thread>
     @foreach (var movie in Model.Movies)
     {
         <tr>
-            <td>@Html.ActionLink($"{movie.Name}", movie.Id.ToString(), "Movies")</td>
-            <td>@movie.Genre.Name</td>
+            <td style="padding: 20px">@Html.ActionLink($"{movie.Name}", (movie.Id - 1).ToString(), "Movies")</td>
+            <td style="padding: 20px">@movie.Genre.Name</td>
         </tr>
     }
 </table>
