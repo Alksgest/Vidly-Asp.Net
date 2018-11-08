@@ -3,13 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Vidly.Models;
-using Vidly.ViewModels;
 using VidlyApp.Models;
-using System.Data.Entity;
 using VidlyApp.ViewModels;
+using System.Data.Entity;
 
-namespace Vidly.Controllers
+namespace VidlyApp.Controllers
 {
     public class CustomersController : Controller
     {
@@ -46,7 +44,7 @@ namespace Vidly.Controllers
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
-            var viewModel = new NewCustomerViewModel
+            NewCustomerViewModel viewModel = new NewCustomerViewModel
             {
                 MembershipTypes = membershipTypes
             };

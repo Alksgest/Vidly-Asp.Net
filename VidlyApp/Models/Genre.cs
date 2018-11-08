@@ -1,4 +1,4 @@
-﻿namespace Vidly.Models
+﻿namespace VidlyApp.Models
 {
     public class Genre
     {
