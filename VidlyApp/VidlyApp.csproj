@@ -234,9 +234,18 @@
     <Compile Include="Migrations\201811080753250_AddBirthdate.Designer.cs">
       <DependentUpon>201811080753250_AddBirthdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811080826568_ExpandMovieAddedGenre.cs" />
+    <Compile Include="Migrations\201811080826568_ExpandMovieAddedGenre.Designer.cs">
+      <DependentUpon>201811080826568_ExpandMovieAddedGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811080834078_AddedGenres.cs" />
+    <Compile Include="Migrations\201811080834078_AddedGenres.Designer.cs">
+      <DependentUpon>201811080834078_AddedGenres.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -354,6 +363,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811080753250_AddBirthdate.resx">
       <DependentUpon>201811080753250_AddBirthdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080826568_ExpandMovieAddedGenre.resx">
+      <DependentUpon>201811080826568_ExpandMovieAddedGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080834078_AddedGenres.resx">
+      <DependentUpon>201811080834078_AddedGenres.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
