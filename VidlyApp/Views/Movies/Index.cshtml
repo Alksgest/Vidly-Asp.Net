@@ -8,19 +8,22 @@
 {
     <p>Threre are no Movies</p>
 }
-
-<table>
-    <thread>
-        <tr>
-            <th style="padding: 20px">Movie</th>
-            <th style="padding: 20px">Genre</th>
-        </tr>
-    </thread>
-    @foreach (var movie in Model.Movies)
-    {
-        <tr>
-            <td style="padding: 20px">@Html.ActionLink($"{movie.Name}", "Details", new { id = movie.Id - 1 })</td>
-            <td style="padding: 20px">@movie.Genre.Name</td>
-        </tr>
-    }
-</table>
+@using (Html.BeginForm("New", "Movies"))
+{
+    <button type="submit">New Movie</button>
+}
+    <table>
+        <thread>
+            <tr>
+                <th style="padding: 20px">Movie</th>
+                <th style="padding: 20px">Genre</th>
+            </tr>
+        </thread>
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>
+                <td style="padding: 20px">@Html.ActionLink($"{movie.Name}", "Details", new { id = movie.Id - 1 })</td>
+                <td style="padding: 20px">@movie.Genre.Name</td>
+            </tr>
+        }
+    </table>
