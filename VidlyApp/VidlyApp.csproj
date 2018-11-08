@@ -242,6 +242,38 @@
     <Compile Include="Migrations\201811080834078_AddedGenres.Designer.cs">
       <DependentUpon>201811080834078_AddedGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811080853090_AddedMovieList.cs" />
+    <Compile Include="Migrations\201811080853090_AddedMovieList.Designer.cs">
+      <DependentUpon>201811080853090_AddedMovieList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811080901554_DropGenresTable.cs" />
+    <Compile Include="Migrations\201811080901554_DropGenresTable.Designer.cs">
+      <DependentUpon>201811080901554_DropGenresTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811080904428_AddedGenresList.cs" />
+    <Compile Include="Migrations\201811080904428_AddedGenresList.Designer.cs">
+      <DependentUpon>201811080904428_AddedGenresList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811080911045_DropMoviesGenresTables.cs" />
+    <Compile Include="Migrations\201811080911045_DropMoviesGenresTables.Designer.cs">
+      <DependentUpon>201811080911045_DropMoviesGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811080912124_AddMoviesGenresTables.cs" />
+    <Compile Include="Migrations\201811080912124_AddMoviesGenresTables.Designer.cs">
+      <DependentUpon>201811080912124_AddMoviesGenresTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811080913490_AddedGenres1.cs" />
+    <Compile Include="Migrations\201811080913490_AddedGenres1.Designer.cs">
+      <DependentUpon>201811080913490_AddedGenres1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811080946001_AddedNumberInStockToMovieModel.cs" />
+    <Compile Include="Migrations\201811080946001_AddedNumberInStockToMovieModel.Designer.cs">
+      <DependentUpon>201811080946001_AddedNumberInStockToMovieModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811080947202_AddedMoviesList.cs" />
+    <Compile Include="Migrations\201811080947202_AddedMoviesList.Designer.cs">
+      <DependentUpon>201811080947202_AddedMoviesList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -369,6 +401,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811080834078_AddedGenres.resx">
       <DependentUpon>201811080834078_AddedGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080853090_AddedMovieList.resx">
+      <DependentUpon>201811080853090_AddedMovieList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080901554_DropGenresTable.resx">
+      <DependentUpon>201811080901554_DropGenresTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080904428_AddedGenresList.resx">
+      <DependentUpon>201811080904428_AddedGenresList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080911045_DropMoviesGenresTables.resx">
+      <DependentUpon>201811080911045_DropMoviesGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080912124_AddMoviesGenresTables.resx">
+      <DependentUpon>201811080912124_AddMoviesGenresTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080913490_AddedGenres1.resx">
+      <DependentUpon>201811080913490_AddedGenres1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080946001_AddedNumberInStockToMovieModel.resx">
+      <DependentUpon>201811080946001_AddedNumberInStockToMovieModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811080947202_AddedMoviesList.resx">
+      <DependentUpon>201811080947202_AddedMoviesList.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

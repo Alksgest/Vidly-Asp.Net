@@ -23,7 +23,7 @@ namespace Vidly.Controllers
         public MoviesController()
         {
             _context = new ApplicationDbContext();
-            MoviesList = _context.Movies.Include(c => c.Genre).ToList();
+            MoviesList = _context.Movies.Include(m => m.Genre).ToList();
         }
         // GET: Movies/Random
         public ActionResult Random()

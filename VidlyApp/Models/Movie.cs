@@ -19,6 +19,7 @@ namespace Vidly.Models
         public DateTime ReleaseDate { get; set; }
         [Required]
         public DateTime DateAdded { get; set; }
+        public byte NumberInStock { get; set; }
     }
     //movies/random
 }

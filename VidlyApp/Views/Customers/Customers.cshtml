@@ -11,18 +11,18 @@
 <table>
     <thread>
         <tr>
-            <th>Customer</th>
-            <th>Membership Type</th>
-            <th>Discount rate</th>
+            <th style="padding: 20px">Customer</th>
+            <th style="padding: 20px">Membership Type</th>
+            <th style="padding: 20px">Discount rate</th>
             
         </tr>
     </thread>
        @foreach (var customer in Model.Customers)
         {
-            <tr>
-                <td>@Html.ActionLink($"{customer.Name}", customer.Id.ToString(), "Customers")</td>
-                <td>@customer.MembershipType.Name</td>
-                <td>@customer.MembershipType.DiscountRate%</td>
+            <tr >
+                <td style="padding: 20px">@Html.ActionLink($"{customer.Name}", customer.Id.ToString(), "Customers")</td>
+                <td style="padding: 20px">@customer.MembershipType.Name</td>
+                <td style="padding: 20px">@customer.MembershipType.DiscountRate%</td>
             </tr>
         }
    </table>
