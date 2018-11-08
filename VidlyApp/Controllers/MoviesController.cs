@@ -5,20 +5,14 @@ using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 using Vidly.ViewModels;
+using VidlyApp.Models;
+using System.Data.Entity;
 
 namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-
-        List<Customer> CustomersList = new List<Customer>
-            {
-                new Customer{Name = "John Smith" },
-                new Customer{Name = "Mary Williams" },
-                new Customer{Name = "Vladyslav Kyrychenko" },
-                new Customer{Name = "Vlad Noda" }
-            };
-
+        private ApplicationDbContext _context;
         List<Movie> MoviesList = new List<Movie>
             {
                 new Movie{Name = "Robin Hood", Id = 0 },
@@ -26,7 +20,11 @@ namespace Vidly.Controllers
                 new Movie{Name = "Disobedience", Id = 2 },
                 new Movie{Name = "Coco", Id = 3 }
             };
-
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+            MoviesList = _context.Movies.Include(c => c.Genre).ToList();
+        }
         // GET: Movies/Random
         public ActionResult Random()
         {
@@ -35,7 +33,7 @@ namespace Vidly.Controllers
             var viewModel = new RandomMovieViewModel()
             {
                 Movie = movie,
-                Customers = CustomersList
+                Customers = new List<Customer>()
             };
 
             var viewResult = new ViewResult();
