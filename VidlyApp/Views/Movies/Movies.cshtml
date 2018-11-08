@@ -2,27 +2,23 @@
 
 
 
-<h1> Movies</h1>
+<h1> Movies </h1>
+
+@if (!Model.Movies.Any())
+{
+<p>Threre are no Movies</p>
+}
 
 <table>
-    <caption>Movies</caption>
-    @if (Model.Movies.Count > 0)
-    {
-        int count = 0;
-        foreach (var movie in Model.Movies)
-        {
-            count++;
-            <tr>
-                <td>@Html.ActionLink($"{movie.Name}", count.ToString(), "Movies")</td>
-            </tr>
-        }
-    }
-    else
+    <thread>
+        <tr>
+            <th>Movies</th>
+        </tr>
+    </thread>
+    @foreach (var movies in Model.Movies)
     {
         <tr>
-            <td>
-                <text>Threre are no movies</text>
-            </td>
+            <td>@Html.ActionLink($"{movies.Name}", movies.Id.ToString(), "Movies")</td>
         </tr>
     }
 </table>

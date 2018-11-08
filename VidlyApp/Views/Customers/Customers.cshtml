@@ -3,25 +3,26 @@
 
 <h1> Customers </h1>
 
+@if (!Model.Customers.Any())
+{
+    <p>Threre are no customers</p>
+}
+
 <table>
-    <caption>Customer</caption>
-    @if (Model.Customers.Count > 0)
-    {
-        int count = 0;
-        foreach (var customer in Model.Customers)
+    <thread>
+        <tr>
+            <th>Customer</th>
+            <th>Membership Type</th>
+            <th>Discount rate</th>
+            
+        </tr>
+    </thread>
+       @foreach (var customer in Model.Customers)
         {
-            count++;
             <tr>
-                <td>@Html.ActionLink($"{customer.Name}", count.ToString(), "Customers")</td>
+                <td>@Html.ActionLink($"{customer.Name}", customer.Id.ToString(), "Customers")</td>
+                <td>@customer.MembershipType.Name</td>
+                <td>@customer.MembershipType.DiscountRate%</td>
             </tr>
         }
-    }
-    else
-    {
-        <tr>
-            <td>
-            <text>  Threre are no customers </text>
-               </td>
-           </tr>
-    }
-</table>
+   </table>
