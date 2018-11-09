@@ -286,6 +286,42 @@
     <Compile Include="Migrations\201811081601166_AddedRequiredToNameMemberShipType.Designer.cs">
       <DependentUpon>201811081601166_AddedRequiredToNameMemberShipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811090743342_AddedNewRequireds.cs" />
+    <Compile Include="Migrations\201811090743342_AddedNewRequireds.Designer.cs">
+      <DependentUpon>201811090743342_AddedNewRequireds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811090954468_DeleteAllRowMovies.cs" />
+    <Compile Include="Migrations\201811090954468_DeleteAllRowMovies.Designer.cs">
+      <DependentUpon>201811090954468_DeleteAllRowMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811091004031_AddedMoviesIntoTheTableAndSetPriceToNullable.cs" />
+    <Compile Include="Migrations\201811091004031_AddedMoviesIntoTheTableAndSetPriceToNullable.Designer.cs">
+      <DependentUpon>201811091004031_AddedMoviesIntoTheTableAndSetPriceToNullable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811091005132_DeleteMovies_2.cs" />
+    <Compile Include="Migrations\201811091005132_DeleteMovies_2.Designer.cs">
+      <DependentUpon>201811091005132_DeleteMovies_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811091009136_AddMovies_2.cs" />
+    <Compile Include="Migrations\201811091009136_AddMovies_2.Designer.cs">
+      <DependentUpon>201811091009136_AddMovies_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811091010016_DeleteMovies_3.cs" />
+    <Compile Include="Migrations\201811091010016_DeleteMovies_3.Designer.cs">
+      <DependentUpon>201811091010016_DeleteMovies_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811091010332_AddMovies_3.cs" />
+    <Compile Include="Migrations\201811091010332_AddMovies_3.Designer.cs">
+      <DependentUpon>201811091010332_AddMovies_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811091017035_DeleteMovies_4.cs" />
+    <Compile Include="Migrations\201811091017035_DeleteMovies_4.Designer.cs">
+      <DependentUpon>201811091017035_DeleteMovies_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201811091018145_AddMovies_4.cs" />
+    <Compile Include="Migrations\201811091018145_AddMovies_4.Designer.cs">
+      <DependentUpon>201811091018145_AddMovies_4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -295,6 +331,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\NumberInStockValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
@@ -453,6 +490,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811081601166_AddedRequiredToNameMemberShipType.resx">
       <DependentUpon>201811081601166_AddedRequiredToNameMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811090743342_AddedNewRequireds.resx">
+      <DependentUpon>201811090743342_AddedNewRequireds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811090954468_DeleteAllRowMovies.resx">
+      <DependentUpon>201811090954468_DeleteAllRowMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091004031_AddedMoviesIntoTheTableAndSetPriceToNullable.resx">
+      <DependentUpon>201811091004031_AddedMoviesIntoTheTableAndSetPriceToNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091005132_DeleteMovies_2.resx">
+      <DependentUpon>201811091005132_DeleteMovies_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091009136_AddMovies_2.resx">
+      <DependentUpon>201811091009136_AddMovies_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091010016_DeleteMovies_3.resx">
+      <DependentUpon>201811091010016_DeleteMovies_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091010332_AddMovies_3.resx">
+      <DependentUpon>201811091010332_AddMovies_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091017035_DeleteMovies_4.resx">
+      <DependentUpon>201811091017035_DeleteMovies_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811091018145_AddMovies_4.resx">
+      <DependentUpon>201811091018145_AddMovies_4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

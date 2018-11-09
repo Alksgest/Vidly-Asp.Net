@@ -57,7 +57,7 @@ namespace VidlyApp.Controllers
             return View("CustomerForm", viewModel);
         }
 
-        [HttpPost]
+        [HttpPost][ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
             if(!ModelState.IsValid)
@@ -91,6 +91,7 @@ namespace VidlyApp.Controllers
             var membershipTypes = _context.MembershipTypes.ToList();
             CustomerFormViewModel viewModel = new CustomerFormViewModel
             {
+                Customer = new Customer(),
                 MembershipTypes = membershipTypes
             };
             return View("CustomerForm", viewModel);
