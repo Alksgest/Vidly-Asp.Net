@@ -29,17 +29,27 @@
             <td>@customer.MembershipType.Name</td>
             <td>@customer.MembershipType.DiscountRate%</td>
             <td>
-                <button class="btn-link js-delete">Delete</button>
+                <button data-customer-id="@customer.Id" class="btn-link js-delete">Delete</button>
             </td>
         </tr>
     }
 </table>
 @section scripts
 {
-    <script>
+    <script> //Мой первый скрипт!
         $(document).ready(function () {
             $("#customers .js-delete").on("click", function () {
-                confirm("Are you sure you want to delete this customer?")
+                var button = $(this);
+                if (confirm("Are you sure you want to delete this customer?")) {
+                    $.ajax({
+                        url: "/api/customers/" + button.attr("data-customer-id"),
+                        method: "Delete",
+                        success: function () {
+                            console.log("Success");
+                            button.parents("tr").remove();
+                        }
+                    });
+                }
             });
         })
     </script>
