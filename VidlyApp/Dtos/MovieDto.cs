@@ -18,6 +18,7 @@ namespace VidlyApp.Dtos
 
         [Required(ErrorMessage = "Please enter movie`s genre.")]
         public int GenreId { get; set; }
+        public GenreDto Genre { get; set; }
 
         [Display(Name = "Release Date")]
         public DateTime ReleaseDate { get; set; }

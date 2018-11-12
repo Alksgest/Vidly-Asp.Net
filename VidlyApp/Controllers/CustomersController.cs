@@ -37,11 +37,11 @@ namespace VidlyApp.Controllers
         //[Route("Customers")]
         public ActionResult Index()
         {
-            var viewModel = new CustomersViewModel()
-            {
-                Customers = this.CustomersList
-            };
-            return View(viewModel);
+            //var viewModel = new CustomersViewModel()
+            //{
+            //    Customers = this.CustomersList
+            //};
+            return View();
         }
         public ActionResult Edit(int id)
         {
