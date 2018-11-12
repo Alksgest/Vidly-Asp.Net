@@ -68,7 +68,7 @@ namespace VidlyApp.Controllers.Api
 
             _context.SaveChanges();
 
-            return Ok(movieInDb);
+            return Ok();
         }
         [HttpDelete]
         public IHttpActionResult DeleteMovie(int id)
