@@ -42,11 +42,10 @@ namespace VidlyApp.Controllers
 
         public ActionResult Index()
         {
-            var viewModel = new MoviesViewModel()
-            {
-                Movies = MoviesList
-            };
-            return View(viewModel);
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
+            else
+                return View("ReadOnlyList");
         }
 
       //  [Route("Movies/{id:int}")]
@@ -89,6 +88,7 @@ namespace VidlyApp.Controllers
             return RedirectToAction("Index", "Movies");
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();

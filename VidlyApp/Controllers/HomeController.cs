@@ -8,6 +8,7 @@ using VidlyApp.ViewModels;
 
 namespace VidlyApp.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
         public ActionResult Index()

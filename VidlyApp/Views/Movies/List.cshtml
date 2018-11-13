@@ -4,15 +4,13 @@
 
 <h1> Movies </h1>
 
-@if (!Model.Movies.Any())
-{
-    <p>Threre are no Movies</p>
-}
+
 @using (Html.BeginForm("New", "Movies"))
 {
-    <button type="submit">New Movie</button>
+    <button type="submit" class="btn-primary">New Movie</button>
     <p></p>
 }
+
 <table id="movies" class="table table-bordered table-hover">
     <thead>
         <tr>
@@ -25,17 +23,6 @@
     <tbody></tbody>
 </table>
 
-@*@foreach (var movie in Model.Movies)
-{
-    <tr>
-        <td>@Html.ActionLink($"{movie.Name}", "Edit", new { id = movie.Id })</td>
-        <td>@movie.Genre.Name</td>
-        <td>@movie.ReleaseDate.ToShortDateString()</td>
-        <td>
-            <button data-movie-id="@movie.Id" class="btn-link js-delete">Delete</button>
-        </td>
-    </tr>
-}*@
 
 @section scripts
 {
@@ -50,7 +37,7 @@
                     {
                         data: "name",
                         render: function (data, type, movie) {
-                            return "<a href='/customers/edit/" + movie.id + "'>" + movie.name + "</a>";
+                            return "<a href='/movies/edit/" + movie.id + "'>" + movie.name + "</a>";
                         }
                     },
                     {
